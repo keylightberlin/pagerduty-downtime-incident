@@ -1,6 +1,6 @@
 {
-  "name": "pagerduty-downtime-incident",
-  "version": "1.0.1",
+  "name": "pagerduty-downtime-trigger",
+  "version": "3.0.0",
   "description": "github action which pings an endpoint and informs pager duty in case it fails",
   "main": "src/index.ts",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "ncc build src/index.ts --minify"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^12.12.47",
     "@zeit/ncc": "^0.22.3",
