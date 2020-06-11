@@ -1,0 +1,23 @@
+{
+  "name": "key-health",
+  "version": "0.0.1",
+  "description": "github action which pings an endpoint and informs pager duty in case it fails",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "ncc build src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.12.47",
+    "@zeit/ncc": "^0.22.3",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "@actions/core": "^1.2.0"
+  }
+}

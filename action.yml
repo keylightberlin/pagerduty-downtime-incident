@@ -1,0 +1,24 @@
+name: 'Uptime Action'
+description: 'Ping an URL and check HTTP status code'
+inputs:
+  pagerduty_token:
+    description: 'Your pager duty token.'
+    required: true
+  pagerduty_from:
+    description: 'Your pager duty token.'
+    required: true
+  pagerduty_service_id:
+    description: 'Your pager duty token.'
+    required: true
+  endpoint:
+    description: 'Endpoint to test'
+    required: true
+outputs:
+  status:
+    description: 'Result status'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'square'
+  color: 'green'
