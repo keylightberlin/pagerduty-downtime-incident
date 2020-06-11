@@ -52,13 +52,10 @@ with:
 
 
 ```
+
 on:
   schedule:
     - cron:  '*/5 * * * *'
-env:
-  PAGERDUTY_TOKEN: ${{ secrets.PAGERDUTY_TOKEN }}
-  PAGERDUTY_SERVICE_ID: ${{ secrets.PAGERDUTY_SERVICE_ID }}
-  PAGERDUTY_FROM: ${{ secrets.PAGERDUTY_FROM }}
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
@@ -67,10 +64,10 @@ jobs:
       matrix:
         endpoint: ["https://keylight.de", "https://subscription-suite.com"]
     steps:
-      - uses: keylightberlin/pagerdutyuptime@v1
+      - uses: keylightberlin/pagerduty-downtime-incident@v2
         with:
-          pagerduty_token: ${PAGERDUTY_TOKEN}
-          pagerduty_from: ${PAGERDUTY_FROM}
-          pagerduty_service_id: ${PAGERDUTY_SERVICE_ID}
+          pagerduty_token: ${{ secrets.PAGERDUTY_TOKEN }}
+          pagerduty_from: 'hello@keylight.de'
+          pagerduty_service_id: ${{ secrets.PAGERDUTY_SERVICE_ID }}
           endpoint: ${{ matrix.endpoint }}
 ```
