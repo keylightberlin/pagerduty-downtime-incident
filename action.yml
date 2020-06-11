@@ -1,5 +1,5 @@
-name: 'Uptime Action'
-description: 'Ping an URL and check HTTP status code'
+name: 'PagerDuty Downtime Trigger'
+description: 'Pings a URL and triggers a PagerDuty incident in case the URL is not reachable'
 inputs:
   pagerduty_token:
     description: 'Your pager duty token.'

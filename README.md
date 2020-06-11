@@ -1,9 +1,9 @@
-# Uptime check with pagerduty incident integration
+# PagerDuty Downtime Trigger
 
-Pagerduty allows to creat incidents via API. 
+PagerDuty allows to creat incidents via API. 
 This action checks if a specific endpoint is reachable and creates an incident in case it's not working.
 
-see here for more information on the incindens API: https://developer.pagerduty.com/docs/incident-creation-api
+see here for more information on the incidents API: https://developer.pagerduty.com/docs/incident-creation-api
 
 
 ## Inputs
